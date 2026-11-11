@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GK Master - Learn, Practice, Test</title>
-    <!-- FontAwesome for Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -34,12 +35,11 @@
             flex-direction: column;
         }
 
-        /* Top Header */
         header {
             background: linear-gradient(135deg, #0284c7, #0f172a);
             color: white;
             padding: 15px 20px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             position: relative;
             z-index: 100;
         }
@@ -74,7 +74,6 @@
             letter-spacing: 1px;
         }
 
-        /* Desktop Nav Menu */
         .nav-menu {
             display: flex;
             gap: 15px;
@@ -92,11 +91,11 @@
             display: block;
         }
 
-        .nav-menu a:hover, .nav-menu a.active {
+        .nav-menu a:hover,
+        .nav-menu a.active {
             background: rgba(255, 255, 255, 0.2);
         }
 
-        /* Mobile Hamburger Icon */
         .mobile-toggle {
             display: none;
             background: rgba(255, 255, 255, 0.15);
@@ -106,14 +105,8 @@
             padding: 8px 14px;
             border-radius: 6px;
             cursor: pointer;
-            transition: background 0.2s;
         }
 
-        .mobile-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Main Layout */
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -122,7 +115,6 @@
             flex: 1;
         }
 
-        /* Ads Banner Placeholder */
         .ad-space {
             background: #e2e8f0;
             border: 2px dashed #94a3b8;
@@ -135,7 +127,6 @@
             font-size: 14px;
         }
 
-        /* 8 Main Category Cards Grid */
         .category-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -150,8 +141,7 @@
             padding: 25px 20px;
             text-align: center;
             cursor: pointer;
-            box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.2), 0 4px 6px -4px rgba(2, 132, 199, 0.1);
-            transform: translateY(0);
+            box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.2);
             transition: all 0.25s ease;
             display: flex;
             flex-direction: column;
@@ -162,8 +152,6 @@
 
         .cat-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.3);
-            border-color: #38bdf8;
             background: linear-gradient(145deg, #bae6fd, #7dd3fc);
         }
 
@@ -178,7 +166,6 @@
             font-weight: 700;
         }
 
-        /* Page View Switching */
         .view-section {
             display: none;
         }
@@ -187,7 +174,6 @@
             display: block;
         }
 
-        /* Sub-Set & Topic Selection Grid */
         .sub-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -207,7 +193,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
             transition: all 0.2s ease;
         }
 
@@ -217,12 +202,6 @@
             transform: translateY(-3px);
         }
 
-        .set-btn i {
-            font-size: 20px;
-            color: var(--primary);
-        }
-
-        /* Section Title & Navigation Back Button */
         .section-header {
             display: flex;
             align-items: center;
@@ -245,14 +224,12 @@
             gap: 6px;
         }
 
-        /* Show Answer Accordion View (GK, Science, Topic Wise) */
         .qa-item {
             background: white;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .qa-item p {
@@ -283,13 +260,11 @@
             font-weight: 700;
         }
 
-        /* Clean White Plain Text Feed for Math & GK Short Tricks */
         .plain-feed {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 10px;
             padding: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .trick-box {
@@ -297,24 +272,20 @@
             border-bottom: 1px solid #f1f5f9;
         }
 
-        .trick-box:last-child {
-            border-bottom: none;
-        }
-
         .trick-box h4 {
             font-size: 18px;
             color: #0284c7;
             margin-bottom: 8px;
+            font-weight: 700;
         }
 
         .trick-box p {
             font-size: 15px;
             color: #334155;
-            line-height: 1.6;
+            line-height: 1.7;
             white-space: pre-line;
         }
 
-        /* Watch & Learn Video Cards View */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -325,21 +296,13 @@
             background: white;
             border: 1px solid #cbd5e1;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 20px;
+            text-align: center;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            text-align: center;
             gap: 15px;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         }
 
         .video-card-logo {
@@ -361,7 +324,6 @@
             color: #1e293b;
         }
 
-        /* 1. ENHANCED VIDEO MODAL PLAYER (Wider & Taller) */
         #video-modal {
             display: none;
             position: fixed;
@@ -380,12 +342,11 @@
             background: #0f172a;
             color: white;
             width: 95%;
-            max-width: 1000px; /* Increased Width */
+            max-width: 1000px;
             border-radius: 14px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
             max-height: 95vh;
         }
 
@@ -406,7 +367,6 @@
             color: white;
             font-size: 26px;
             cursor: pointer;
-            line-height: 1;
         }
 
         .modal-body {
@@ -417,12 +377,11 @@
         .video-responsive-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             background: #000;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
 
         .video-responsive-wrapper iframe {
@@ -434,13 +393,11 @@
             border: 0;
         }
 
-        /* Quiz Box Styling */
         .quiz-container {
             background: #ffffff;
             border: 2px solid #38bdf8;
             border-radius: 14px;
             padding: 30px 25px;
-            box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
             max-width: 800px;
             margin: 0 auto;
         }
@@ -451,7 +408,6 @@
             color: #0284c7;
             text-align: center;
             margin: 20px 0 25px 0;
-            line-height: 1.4;
         }
 
         .options-list {
@@ -470,24 +426,16 @@
             font-weight: 600;
             cursor: pointer;
             text-align: left;
-            transition: all 0.2s;
-        }
-
-        .option-btn:hover:not([disabled]) {
-            background: #e0f2fe;
-            border-color: #0284c7;
         }
 
         .option-btn.correct {
             background-color: var(--success) !important;
             color: white !important;
-            border-color: var(--success) !important;
         }
 
         .option-btn.incorrect {
             background-color: var(--danger) !important;
             color: white !important;
-            border-color: var(--danger) !important;
         }
 
         .quiz-controls {
@@ -504,48 +452,27 @@
             border-radius: 6px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 15px;
         }
+
         .quiz-btn:disabled {
             background: #cbd5e1;
             cursor: not-allowed;
         }
 
-        /* 2. ATTRACTIVE QUIZ RESULT CARD DESIGN */
         .result-card {
             background: linear-gradient(135deg, #ffffff, #f0f9ff);
             border: 3px solid #38bdf8;
             border-radius: 20px;
             padding: 35px 25px;
             text-align: center;
-            box-shadow: 0 20px 30px rgba(2, 132, 199, 0.2);
             max-width: 650px;
             margin: 10px auto;
-            animation: popIn 0.4s ease-out;
-        }
-
-        @keyframes popIn {
-            0% { transform: scale(0.9); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
         }
 
         .result-icon {
             font-size: 55px;
             color: #f59e0b;
             margin-bottom: 15px;
-        }
-
-        .result-card h2 {
-            font-size: 28px;
-            color: #0f172a;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .result-subtitle {
-            font-size: 15px;
-            color: #64748b;
-            margin-bottom: 25px;
         }
 
         .result-stats-grid {
@@ -561,13 +488,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
         }
 
-        .stat-box.total { background: #e0f2fe; color: #0369a1; }
-        .stat-box.correct { background: #dcfce7; color: #15803d; }
-        .stat-box.incorrect { background: #fee2e2; color: #b91c1c; }
-        .stat-box.accuracy { background: #fef3c7; color: #b45309; }
+        .stat-box.total {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .stat-box.correct {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .stat-box.incorrect {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .stat-box.accuracy {
+            background: #fef3c7;
+            color: #b45309;
+        }
 
         .stat-val {
             font-size: 26px;
@@ -590,7 +531,6 @@
             font-weight: 700;
             font-size: 16px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
         }
 
         .restart-btn {
@@ -602,15 +542,8 @@
             font-weight: 700;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 6px 15px rgba(22, 163, 74, 0.3);
-            transition: transform 0.2s;
         }
 
-        .restart-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Professional Footer Styling */
         footer {
             background: linear-gradient(135deg, #0f172a, #0284c7);
             color: #f8fafc;
@@ -635,20 +568,10 @@
             position: relative;
         }
 
-        .footer-col h4::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 40px;
-            height: 2px;
-            background: #38bdf8;
-        }
-
-        .footer-col p {
+        .footer-col p,
+        .footer-col ul li a {
             font-size: 14px;
             color: #cbd5e1;
-            line-height: 1.6;
         }
 
         .footer-col ul {
@@ -657,17 +580,6 @@
 
         .footer-col ul li {
             margin-bottom: 10px;
-        }
-
-        .footer-col ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-col ul li a:hover {
-            color: #38bdf8;
         }
 
         .footer-social {
@@ -686,12 +598,6 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: background 0.2s, transform 0.2s;
-        }
-
-        .footer-social a:hover {
-            background: #38bdf8;
-            transform: translateY(-3px);
         }
 
         .footer-bottom {
@@ -704,18 +610,13 @@
             color: #94a3b8;
         }
 
-        .footer-bottom strong {
-            color: #38bdf8;
-        }
-
-        /* 3. MOBILE RESPONSIVE HAMBURGER NAVIGATION */
         @media (max-width: 768px) {
             .mobile-toggle {
-                display: block; /* Show 3-line hamburger icon */
+                display: block;
             }
 
             .nav-menu {
-                display: none; /* Hide default top menu bar */
+                display: none;
                 width: 100%;
                 flex-direction: column;
                 background: #0369a1;
@@ -723,40 +624,30 @@
                 top: 100%;
                 left: 0;
                 padding: 10px 20px;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-                border-top: 1px solid rgba(255,255,255,0.1);
             }
 
             .nav-menu.show {
-                display: flex; /* Open Dropdown on toggle */
+                display: flex;
             }
 
             .nav-menu a {
                 padding: 12px 10px;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
-
-            .quiz-question { font-size: 19px; }
-            .cat-card { padding: 18px 15px; }
-            .quiz-container { padding: 20px 15px; }
-            .modal-content { width: 98%; }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Top Header Navigation -->
+    <!-- Header Navigation -->
     <header>
         <div class="header-container">
             <div class="logo-area">
                 <div class="logo-title"><i class="fa-solid fa-graduation-cap"></i> GK MASTER</div>
                 <div class="logo-tagline">Learn, Practice, Test</div>
             </div>
-            
-            <!-- Mobile 3-line Hamburger Button -->
             <button class="mobile-toggle" onclick="toggleMobileNav()"><i class="fa-solid fa-bars"></i></button>
-
-            <!-- Menu Options Bar (Converts to Dropdown in Mobile) -->
             <ul class="nav-menu" id="mobile-nav">
                 <li><a href="#" class="active" onclick="showHome()">Home</a></li>
                 <li><a href="#" onclick="openCategory('gk')">General Knowledge</a></li>
@@ -768,50 +659,14 @@
     </header>
 
     <div class="container">
-        <!-- Header Ads Unit -->
-        <div class="ad-space">
-            <i class="fa-solid fa-rectangle-ad"></i> Advertisement Space (728x90 Header Banner)
-        </div>
+        <div class="ad-space"><i class="fa-solid fa-rectangle-ad"></i> Advertisement Space (728x90 Header Banner)</div>
 
-        <!-- 1. Home Page View (8 Light Blue Cards) -->
+        <!-- Dynamic Home Grid View -->
         <div id="home-view" class="view-section active">
-            <div class="category-grid">
-                <div class="cat-card" onclick="openCategory('gk')">
-                    <i class="fa-solid fa-book-open"></i>
-                    <h3>General Knowledge</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('science')">
-                    <i class="fa-solid fa-flask"></i>
-                    <h3>General Science</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('topic')">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <h3>Topic Wise GK</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('math-tricks')">
-                    <i class="fa-solid fa-calculator"></i>
-                    <h3>Math Short Tricks</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('gk-tricks')">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <h3>GK Short Tricks</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('watch')">
-                    <i class="fa-solid fa-video" style="color: #0284c7;"></i>
-                    <h3>Watch & Learn</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('practice')">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <h3>Practice GK Quiz</h3>
-                </div>
-                <div class="cat-card" onclick="openCategory('test100')">
-                    <i class="fa-solid fa-trophy"></i>
-                    <h3>Test Your Knowledge</h3>
-                </div>
-            </div>
+            <div class="category-grid" id="main-cards-container"></div>
         </div>
 
-        <!-- 2. Set Selection View -->
+        <!-- Dynamic Set Selection View -->
         <div id="set-select-view" class="view-section">
             <div class="section-header">
                 <h2 id="set-title">Select Quiz Set</h2>
@@ -820,7 +675,7 @@
             <div class="sub-grid" id="set-buttons-container"></div>
         </div>
 
-        <!-- 3. Show Answer View -->
+        <!-- QA View -->
         <div id="qa-view" class="view-section">
             <div class="section-header">
                 <h2 id="qa-title">Questions</h2>
@@ -829,7 +684,7 @@
             <div id="qa-content-list"></div>
         </div>
 
-        <!-- 4. Plain Text Feed View -->
+        <!-- Plain Feed View -->
         <div id="plain-feed-view" class="view-section">
             <div class="section-header">
                 <h2 id="feed-title">Short Tricks</h2>
@@ -838,7 +693,7 @@
             <div class="plain-feed" id="feed-content"></div>
         </div>
 
-        <!-- 5. Watch & Learn Video Cards View -->
+        <!-- Watch & Learn View -->
         <div id="watch-view" class="view-section">
             <div class="section-header">
                 <h2>Watch & Learn</h2>
@@ -847,19 +702,18 @@
             <div class="video-grid" id="video-container"></div>
         </div>
 
-        <!-- 6. Quiz Player & Result View -->
+        <!-- Quiz Player & Result View -->
         <div id="quiz-player-view" class="view-section">
             <div class="section-header">
                 <h2 id="quiz-player-title">Interactive Quiz</h2>
                 <button class="back-btn" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> Exit</button>
             </div>
-            
-            <!-- Quiz Running Box -->
+
             <div class="quiz-container" id="quiz-box">
                 <div style="display:flex; justify-content:space-between; color:#0369a1; font-weight:700;">
                     <span id="quiz-progress">Question 1 of 10</span>
                 </div>
-                <div class="quiz-question" id="quiz-q-text">भारत की राजधानी क्या है?</div>
+                <div class="quiz-question" id="quiz-q-text"></div>
                 <div class="options-list" id="quiz-options"></div>
                 <div class="quiz-controls">
                     <button class="quiz-btn" id="prev-btn" onclick="prevQuestion()">Previous</button>
@@ -867,14 +721,10 @@
                 </div>
             </div>
 
-            <!-- Quiz Result Card Container -->
             <div id="quiz-result-container" style="display: none;"></div>
         </div>
 
-        <!-- Bottom Ads Unit -->
-        <div class="ad-space">
-            <i class="fa-solid fa-rectangle-ad"></i> Advertisement Space (Responsive Bottom Ad)
-        </div>
+        <div class="ad-space"><i class="fa-solid fa-rectangle-ad"></i> Advertisement Space (Responsive Bottom Ad)</div>
     </div>
 
     <!-- Enhanced Video Modal Player -->
@@ -886,21 +736,21 @@
             </div>
             <div class="modal-body">
                 <div class="video-responsive-wrapper">
-                    <iframe id="modal-iframe" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="ad-space" style="margin-top: 15px;">
-                    <i class="fa-solid fa-rectangle-ad"></i> Advertisement Space (Below Video Player)
+                    <iframe id="modal-iframe" src="" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Professional Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <h4>GK MASTER (Sujit Singh)</h4>
-                <p>Welcome to GK Master portal! Enhancing your knowledge with accurate GK, Science, Short Tricks, and Interactive Online Tests.</p>
+                <p>Welcome to GK Master portal! Enhancing your knowledge with accurate GK, Science, Short Tricks, and
+                    Interactive Online Tests.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -931,329 +781,21 @@
         </div>
 
         <div class="footer-bottom">
-            &copy; 2026 <strong>GK MASTER (Sujit Singh)</strong>. All Rights Reserved. Designed for competitive exams.
+            &copy; 2026 <strong>GK MASTER (Sujit Singh)</strong>. All Rights Reserved.
         </div>
     </footer>
 
-    <script>
-        const topicsList = [
-            "भारत का इतिहास", "भारत का भूगोल", "भारतीय संविधान", "भारतीय अर्थशास्त्र",
-            "विश्व का इतिहास", "पर्यावरण एवं पारिस्थितिकी", "महत्वपूर्ण राष्ट्रीय दिवस",
-            "प्रमुख खेल कूद", "कंप्यूटर ज्ञान", "पुरस्कार और सम्मान"
-        ];
-
-        const mathTricks = [
-            { title: "Trick 1: Square of Numbers Ending in 5", body: "Rule: Multiply the first digit by (first digit + 1) and append 25 at the end.\nExample: 35² = (3 × 4) | 25 = 1225." },
-            { title: "Trick 2: Multiplication with 11", body: "Rule: Add adjacent digits.\nExample: 43 × 11 -> Keep 4 and 3 at ends, middle is (4+3=7). Answer = 473." }
-        ];
-
-        const gkTricks = [
-            { title: "Trick 1: मुग़ल साम्राज्य के शासक (क्रम से)", body: "Short Trick: BHAJSA\nB - Babur\nH - Humayun\nA - Akbar\nJ - Jahangir\nS - Shah Jahan\nA - Aurangzeb" }
-        ];
-
-        const userVideoId = "bNjaCQDH4tk";
-        const videoTitles = [
-            "भारत का इतिहास - 100 महत्वपूर्ण प्रश्न",
-            "General Science Special Class 2026",
-            "Maths Shortcut Tricks for Fast Calculation",
-            "Indian Polity Top 50 Articles",
-            "World Geography Important MCQs",
-            "Static GK Short Tricks & Formulas",
-            "Reasoning & Mental Ability Practice Set",
-            "Current Affairs & General Awareness",
-            "Computer Awareness Top Questions",
-            "GK Master Live Practice Quiz Class"
-        ];
-
-        let currentQuizData = [];
-        let currentQIndex = 0;
-        let userAnswers = {}; // User selection tracker
-        let currentQuizTitle = "";
-
-        // Mobile Nav Dropdown Toggle
-        function toggleMobileNav() {
-            const nav = document.getElementById('mobile-nav');
-            nav.classList.toggle('show');
-        }
-
-        function showHome() {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('home-view').classList.add('active');
-            document.getElementById('mobile-nav').classList.remove('show');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function openCategory(catKey) {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('mobile-nav').classList.remove('show');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            if (['gk', 'science', 'practice', 'test100'].includes(catKey)) {
-                const container = document.getElementById('set-buttons-container');
-                container.innerHTML = '';
-                
-                let titleName = "";
-                if(catKey === 'gk') titleName = "GK Quiz Sets";
-                else if(catKey === 'science') titleName = "Science Quiz Sets";
-                else if(catKey === 'practice') titleName = "Practice GK Quiz Sets";
-                else if(catKey === 'test100') titleName = "100 Qs Mega Test Sets";
-                
-                document.getElementById('set-title').innerText = titleName;
-
-                for (let i = 1; i <= 10; i++) {
-                    const btn = document.createElement('button');
-                    btn.className = 'set-btn';
-                    
-                    if(catKey === 'test100') {
-                        btn.innerHTML = `<i class="fa-solid fa-trophy"></i> 100 Qs Mega Test Set ${i}`;
-                        btn.onclick = () => startQuizPlayer(`100 Qs Mega Test Set ${i}`, 100);
-                    } else if (catKey === 'practice') {
-                        btn.innerHTML = `<i class="fa-solid fa-pen-to-square"></i> Practice Quiz Set ${i}`;
-                        btn.onclick = () => startQuizPlayer(`Practice Quiz Set ${i}`, 10);
-                    } else {
-                        btn.innerHTML = `<i class="fa-solid fa-book-bookmark"></i> ${catKey.toUpperCase()} Quiz ${i}`;
-                        btn.onclick = () => openQAView(`${catKey.toUpperCase()} Quiz Set ${i}`);
-                    }
-                    container.appendChild(btn);
-                }
-                document.getElementById('set-select-view').classList.add('active');
-
-            } else if (catKey === 'topic') {
-                const container = document.getElementById('set-buttons-container');
-                container.innerHTML = '';
-                document.getElementById('set-title').innerText = "Topic Wise GK";
-
-                topicsList.forEach((topic) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'set-btn';
-                    btn.innerHTML = `<i class="fa-solid fa-folder-open"></i> ${topic}`;
-                    btn.onclick = () => openQAView(topic);
-                    container.appendChild(btn);
-                });
-                document.getElementById('set-select-view').classList.add('active');
-
-            } else if (catKey === 'math-tricks' || catKey === 'gk-tricks') {
-                const container = document.getElementById('feed-content');
-                container.innerHTML = '';
-                const data = (catKey === 'math-tricks') ? mathTricks : gkTricks;
-                document.getElementById('feed-title').innerText = (catKey === 'math-tricks') ? "Math Short Tricks" : "GK Short Tricks";
-
-                data.forEach(item => {
-                    container.innerHTML += `
-                        <div class="trick-box">
-                            <h4>${item.title}</h4>
-                            <p>${item.body}</p>
-                        </div>
-                    `;
-                });
-                document.getElementById('plain-feed-view').classList.add('active');
-
-            } else if (catKey === 'watch') {
-                const container = document.getElementById('video-container');
-                container.innerHTML = '';
-
-                for (let i = 0; i < 10; i++) {
-                    const cardTitle = videoTitles[i];
-                    const card = document.createElement('div');
-                    card.className = 'video-card';
-                    card.innerHTML = `
-                        <div class="video-card-logo"><i class="fa-solid fa-play"></i></div>
-                        <div class="video-card-title">${i + 1}. ${cardTitle}</div>
-                    `;
-                    card.onclick = () => openVideoModal(userVideoId, `${i + 1}. ${cardTitle}`);
-                    container.appendChild(card);
-                }
-                document.getElementById('watch-view').classList.add('active');
-            }
-        }
-
-        function openQAView(title) {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('qa-title').innerText = title;
-            const container = document.getElementById('qa-content-list');
-            container.innerHTML = '';
-
-            for (let i = 1; i <= 10; i++) {
-                container.innerHTML += `
-                    <div class="qa-item">
-                        <p>${i}. ${title} से संबंधित महत्वपूर्ण प्रश्न का उत्तर क्या है?</p>
-                        <button class="show-ans-btn" onclick="toggleAns(this)">Show Answer</button>
-                        <div class="ans-text">उत्तर: यह ${title} का सही उत्तर है।</div>
-                    </div>
-                `;
-            }
-            document.getElementById('qa-view').classList.add('active');
-        }
-
-        function toggleAns(btn) {
-            const ans = btn.nextElementSibling;
-            if (ans.style.display === 'block') {
-                ans.style.display = 'none';
-                btn.innerText = 'Show Answer';
-            } else {
-                ans.style.display = 'block';
-                btn.innerText = 'Hide Answer';
-            }
-        }
-
-        function openVideoModal(videoId, title) {
-            document.getElementById('modal-video-title').innerText = title;
-            document.getElementById('modal-iframe').src = `https://www.youtube.com/embed/${videoId}?si=usptEAZzZoxo61tG&autoplay=1`;
-            document.getElementById('video-modal').style.display = 'flex';
-        }
-
-        function closeVideoModal() {
-            document.getElementById('modal-iframe').src = '';
-            document.getElementById('video-modal').style.display = 'none';
-        }
-
-        /* Interactive Quiz Logic with Scorecard */
-        function startQuizPlayer(title, totalQs = 10) {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('quiz-player-title').innerText = title;
-            currentQuizTitle = title;
-            
-            document.getElementById('quiz-box').style.display = 'block';
-            document.getElementById('quiz-result-container').style.display = 'none';
-
-            currentQuizData = [];
-            userAnswers = {};
-
-            const sampleQs = [
-                { q: "भारत की राजधानी क्या है?", opts: ["मुंबई", "नई दिल्ली", "कोलकाता", "चेन्नई"], ans: 1 },
-                { q: "भारत का राष्ट्रीय खेल कौन सा है?", opts: ["क्रिकेट", "हॉकी", "फुटबॉल", "कबड्डी"], ans: 1 },
-                { q: "कंप्यूटर का दिमाग किसे कहा जाता है?", opts: ["RAM", "ROM", "CPU", "Hard Disk"], ans: 2 },
-                { q: "सौरमंडल का सबसे बड़ा ग्रह कौन सा है?", opts: ["मंगल", "बुध", "बृहस्पति", "शुक्र"], ans: 2 }
-            ];
-
-            for (let i = 0; i < totalQs; i++) {
-                const sample = sampleQs[i % sampleQs.length];
-                currentQuizData.push({
-                    q: `${i + 1}. ${sample.q}`,
-                    options: sample.opts,
-                    correct: sample.ans
-                });
-            }
-            currentQIndex = 0;
-            renderQuizQuestion();
-            document.getElementById('quiz-player-view').classList.add('active');
-        }
-
-        function renderQuizQuestion() {
-            const q = currentQuizData[currentQIndex];
-            document.getElementById('quiz-progress').innerText = `Question ${currentQIndex + 1} of ${currentQuizData.length}`;
-            document.getElementById('quiz-q-text').innerText = q.q;
-
-            const opts = document.getElementById('quiz-options');
-            opts.innerHTML = '';
-
-            document.getElementById('prev-btn').disabled = (currentQIndex === 0);
-            
-            const nextBtn = document.getElementById('next-btn');
-            if (currentQIndex === currentQuizData.length - 1) {
-                nextBtn.innerText = "Submit Quiz";
-            } else {
-                nextBtn.innerText = "Next";
-            }
-
-            const answered = userAnswers.hasOwnProperty(currentQIndex);
-
-            q.options.forEach((opt, idx) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerText = opt;
-
-                if (answered) {
-                    btn.disabled = true;
-                    if (idx === q.correct) btn.classList.add('correct');
-                    if (userAnswers[currentQIndex] === idx && idx !== q.correct) btn.classList.add('incorrect');
-                } else {
-                    btn.onclick = () => selectOption(idx);
-                }
-                opts.appendChild(btn);
-            });
-        }
-
-        function selectOption(idx) {
-            userAnswers[currentQIndex] = idx;
-            renderQuizQuestion();
-        }
-
-        function nextQuestion() {
-            if (currentQIndex < currentQuizData.length - 1) {
-                currentQIndex++;
-                renderQuizQuestion();
-            } else {
-                showQuizResult();
-            }
-        }
-
-        function prevQuestion() {
-            if (currentQIndex > 0) {
-                currentQIndex--;
-                renderQuizQuestion();
-            }
-        }
-
-        /* Quiz End Scorecard Generator */
-        function showQuizResult() {
-            document.getElementById('quiz-box').style.display = 'none';
-
-            let total = currentQuizData.length;
-            let correct = 0;
-            let incorrect = 0;
-
-            currentQuizData.forEach((item, index) => {
-                if (userAnswers.hasOwnProperty(index)) {
-                    if (userAnswers[index] === item.correct) {
-                        correct++;
-                    } else {
-                        incorrect++;
-                    }
-                }
-            });
-
-            let accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
-            let badgeText = "Great Attempt!";
-            if (accuracy >= 80) badgeText = "🏆 Excellent Performance!";
-            else if (accuracy >= 50) badgeText = "👍 Good Job!";
-            else badgeText = "💪 Keep Practicing!";
-
-            const resultContainer = document.getElementById('quiz-result-container');
-            resultContainer.innerHTML = `
-                <div class="result-card">
-                    <div class="result-icon"><i class="fa-solid fa-award"></i></div>
-                    <h2>Quiz Completed!</h2>
-                    <p class="result-subtitle">Here is your performance summary for <strong>${currentQuizTitle}</strong></p>
-                    
-                    <div class="badge-tag">${badgeText}</div>
-
-                    <div class="result-stats-grid">
-                        <div class="stat-box total">
-                            <span class="stat-val">${total}</span>
-                            <span class="stat-lbl">Total Questions</span>
-                        </div>
-                        <div class="stat-box correct">
-                            <span class="stat-val">${correct}</span>
-                            <span class="stat-lbl">Correct Answers</span>
-                        </div>
-                        <div class="stat-box incorrect">
-                            <span class="stat-val">${incorrect}</span>
-                            <span class="stat-lbl">Incorrect Answers</span>
-                        </div>
-                        <div class="stat-box accuracy">
-                            <span class="stat-val">${accuracy}%</span>
-                            <span class="stat-lbl">Accuracy</span>
-                        </div>
-                    </div>
-
-                    <button class="restart-btn" onclick="startQuizPlayer('${currentQuizTitle}', ${total})">
-                        <i class="fa-solid fa-rotate-right"></i> Restart Quiz
-                    </button>
-                </div>
-            `;
-            resultContainer.style.display = 'block';
-        }
-    </script>
+    <!-- ALL JAVASCRIPT FILES LINKED IN INDEX.HTML -->
+    <script src="gk-questions.js"></script>
+    <script src="science-questions.js"></script>
+    <script src="topic-questions.js"></script>
+    <script src="practice-questions.js"></script>
+    <script src="test100-questions.js"></script>
+    <script src="math-tricks.js"></script>
+    <script src="gk-tricks.js"></script>
+    <script src="video-data.js"></script>
+    <script src="buttons-config.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
